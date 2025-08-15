@@ -1,0 +1,394 @@
+/* Theme Variables */
+:root {
+    /* Light Theme Colors */
+    --light-bg-primary: #ffffff;
+    --light-bg-secondary: #f8f9fa;
+    --light-bg-tertiary: #e9ecef;
+    --light-text-primary: #333333;
+    --light-text-secondary: #6c757d;
+    --light-text-muted: #495057;
+    --light-border: #e9ecef;
+    --light-shadow: rgba(0,0,0,0.1);
+    --light-shadow-heavy: rgba(0,0,0,0.15);
+    --light-accent: #007bff;
+    --light-accent-hover: #0056b3;
+    --light-success: #28a745;
+    --light-danger: #dc3545;
+    --light-warning: #ffc107;
+    --light-info: #17a2b8;
+
+    /* Dark Theme Colors */
+    --dark-bg-primary: #1a1a1a;
+    --dark-bg-secondary: #2d2d2d;
+    --dark-bg-tertiary: #404040;
+    --dark-text-primary: #ffffff;
+    --dark-text-secondary: #b0b0b0;
+    --dark-text-muted: #888888;
+    --dark-border: #404040;
+    --dark-shadow: rgba(0,0,0,0.3);
+    --dark-shadow-heavy: rgba(0,0,0,0.5);
+    --dark-accent: #4dabf7;
+    --dark-accent-hover: #74c0fc;
+    --dark-success: #51cf66;
+    --dark-danger: #ff6b6b;
+    --dark-warning: #ffd43b;
+    --dark-info: #74c0fc;
+}
+
+/* Light Theme (Default) */
+.light-theme {
+    --bg-primary: var(--light-bg-primary);
+    --bg-secondary: var(--light-bg-secondary);
+    --bg-tertiary: var(--light-bg-tertiary);
+    --text-primary: var(--light-text-primary);
+    --text-secondary: var(--light-text-secondary);
+    --text-muted: var(--light-text-muted);
+    --border: var(--light-border);
+    --shadow: var(--light-shadow);
+    --shadow-heavy: var(--light-shadow-heavy);
+    --accent: var(--light-accent);
+    --accent-hover: var(--light-accent-hover);
+    --success: var(--light-success);
+    --danger: var(--light-danger);
+    --warning: var(--light-warning);
+    --info: var(--light-info);
+}
+
+/* Dark Theme */
+.dark-theme {
+    --bg-primary: var(--dark-bg-primary);
+    --bg-secondary: var(--dark-bg-secondary);
+    --bg-tertiary: var(--dark-bg-tertiary);
+    --text-primary: var(--dark-text-primary);
+    --text-secondary: var(--dark-text-secondary);
+    --text-muted: var(--dark-text-muted);
+    --border: var(--dark-border);
+    --shadow: var(--dark-shadow);
+    --shadow-heavy: var(--dark-shadow-heavy);
+    --accent: var(--dark-accent);
+    --accent-hover: var(--dark-accent-hover);
+    --success: var(--dark-success);
+    --danger: var(--dark-danger);
+    --warning: var(--dark-warning);
+    --info: var(--dark-info);
+}
+
+/* Apply Theme Colors */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-container {
+    background-color: var(--bg-primary);
+}
+
+/* Header Theme */
+.header {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+.header-center .zoom-controls {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Toolbar Theme */
+.toolbar {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+.tool-group-title {
+    color: var(--text-secondary);
+}
+
+/* Tool Buttons Theme */
+.tool-btn {
+    background: var(--bg-primary);
+    border-color: var(--border);
+    color: var(--text-secondary);
+}
+
+.tool-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 2px 4px rgba(77, 171, 247, 0.2);
+}
+
+.tool-btn.active {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--bg-primary);
+    box-shadow: 0 2px 8px rgba(77, 171, 247, 0.3);
+}
+
+/* Canvas Section Theme */
+.canvas-section {
+    background: var(--bg-tertiary);
+}
+
+.canvas-container {
+    box-shadow: 0 4px 12px var(--shadow-heavy);
+}
+
+#whiteboard-canvas {
+    background: var(--bg-primary);
+}
+
+/* Color Presets Theme */
+.color-preset {
+    border-color: var(--border);
+}
+
+.color-preset.active {
+    border-color: var(--text-primary);
+}
+
+/* Settings Groups Theme */
+.setting-group label {
+    color: var(--text-secondary);
+}
+
+.slider {
+    background: var(--border);
+}
+
+.slider::-webkit-slider-thumb {
+    background: var(--accent);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+.slider::-moz-range-thumb {
+    background: var(--accent);
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+/* Line Style Buttons Theme */
+.line-style-btn {
+    background: var(--bg-primary);
+    border-color: var(--border);
+    color: var(--text-secondary);
+}
+
+.line-style-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.line-style-btn.active {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* Fill Options Theme */
+.fill-btn {
+    background: var(--bg-primary);
+    border-color: var(--border);
+    color: var(--text-secondary);
+}
+
+.fill-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.fill-btn.active {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* Bottom Toolbar Theme */
+.bottom-toolbar {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+/* Buttons Theme */
+.btn {
+    background: var(--bg-primary);
+    border-color: var(--border);
+    color: var(--text-muted);
+}
+
+.btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 2px 4px rgba(77, 171, 247, 0.2);
+}
+
+.btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: var(--bg-primary);
+}
+
+.btn-secondary {
+    background: var(--text-secondary);
+    border-color: var(--text-secondary);
+    color: var(--bg-primary);
+}
+
+.btn-secondary:hover {
+    background: var(--text-muted);
+    border-color: var(--text-muted);
+    color: var(--bg-primary);
+}
+
+/* Dropdown Theme */
+.dropdown-menu {
+    background: var(--bg-primary);
+    border-color: var(--border);
+    box-shadow: 0 4px 12px var(--shadow-heavy);
+}
+
+.dropdown-item {
+    color: var(--text-muted);
+}
+
+.dropdown-item:hover {
+    background: var(--bg-secondary);
+    color: var(--accent);
+}
+
+/* Status Info Theme */
+.status-info {
+    color: var(--text-secondary);
+}
+
+/* Modal Theme */
+.modal {
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: var(--bg-primary);
+    box-shadow: 0 8px 32px var(--shadow-heavy);
+}
+
+.modal-header {
+    border-color: var(--border);
+}
+
+.modal-close {
+    color: var(--text-secondary);
+}
+
+.modal-close:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.modal-body {
+    color: var(--text-primary);
+}
+
+.modal-footer {
+    border-color: var(--border);
+}
+
+/* Text Modal Specific Theme */
+#text-input {
+    background: var(--bg-primary);
+    border-color: var(--border);
+    color: var(--text-primary);
+}
+
+#text-input:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(77, 171, 247, 0.2);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+#theme-toggle:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+
+/* Dark theme specific adjustments */
+.dark-theme .tool-btn.active {
+    box-shadow: 0 2px 8px rgba(77, 171, 247, 0.4);
+}
+
+.dark-theme .btn:hover {
+    box-shadow: 0 2px 4px rgba(77, 171, 247, 0.3);
+}
+
+.dark-theme .color-preset:hover {
+    box-shadow: 0 2px 4px rgba(255,255,255,0.2);
+}
+
+/* Smooth transitions for theme switching */
+* {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease;
+}
+
+/* Canvas specific theme adjustments */
+.dark-theme #whiteboard-canvas {
+    background: var(--bg-primary);
+}
+
+/* Scrollbar theming */
+.toolbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.toolbar::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+.toolbar::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.toolbar::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* Focus states for accessibility */
+.btn:focus,
+.tool-btn:focus,
+.line-style-btn:focus,
+.fill-btn:focus,
+.modal-close:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --light-border: #000000;
+        --dark-border: #ffffff;
+        --light-shadow: rgba(0,0,0,0.5);
+        --dark-shadow: rgba(255,255,255,0.3);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
