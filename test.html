@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteboard Test</title>
+</head>
+<body>
+    <h1>Online Whiteboard Tool - Test Page</h1>
+    <p>The whiteboard application should be accessible at:</p>
+    <a href="index.html" target="_blank">Open Whiteboard Application</a>
+    
+    <h2>Features Included:</h2>
+    <ul>
+        <li>✅ Drawing Tools (Brush, Eraser, Shapes, Text)</li>
+        <li>✅ Color Picker and Brush Settings</li>
+        <li>✅ Undo/Redo Functionality</li>
+        <li>✅ File Operations (Save, Load, Export)</li>
+        <li>✅ Zoom and Pan Controls</li>
+        <li>✅ Dark/Light Theme Toggle</li>
+        <li>✅ Responsive Design</li>
+        <li>✅ Keyboard Shortcuts</li>
+        <li>✅ Auto-save Functionality</li>
+        <li>✅ Touch Support for Mobile</li>
+    </ul>
+    
+    <h2>Browser Compatibility:</h2>
+    <ul>
+        <li>Chrome 80+</li>
+        <li>Firefox 75+</li>
+        <li>Safari 13+</li>
+        <li>Edge 80+</li>
+    </ul>
+    
+    <h2>Keyboard Shortcuts:</h2>
+    <ul>
+        <li><strong>B</strong> - Brush tool</li>
+        <li><strong>E</strong> - Eraser</li>
+        <li><strong>R</strong> - Rectangle</li>
+        <li><strong>C</strong> - Circle</li>
+        <li><strong>L</strong> - Line</li>
+        <li><strong>T</strong> - Text tool</li>
+        <li><strong>S</strong> - Selection tool</li>
+        <li><strong>Ctrl+Z</strong> - Undo</li>
+        <li><strong>Ctrl+Y</strong> - Redo</li>
+        <li><strong>Ctrl+S</strong> - Save</li>
+        <li><strong>Ctrl+O</strong> - Open</li>
+        <li><strong>+/-</strong> - Zoom in/out</li>
+    </ul>
+    
+    <script>
+        // Simple test to check if the application loads
+        window.addEventListener('load', function() {
+            console.log('Test page loaded successfully');
+            
+            // Check if main application file exists
+            fetch('index.html')
+                .then(response => {
+                    if (response.ok) {
+                        console.log('✅ Main application file is accessible');
+                        document.body.innerHTML += '<p style="color: green;">✅ Application files are accessible!</p>';
+                    } else {
+                        console.error('❌ Main application file not found');
+                        document.body.innerHTML += '<p style="color: red;">❌ Application files not accessible</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('❌ Error accessing application:', error);
+                    document.body.innerHTML += '<p style="color: red;">❌ Error accessing application files</p>';
+                });
+        });
+    </script>
+</body>
+</html>
